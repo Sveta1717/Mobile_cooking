@@ -24,5 +24,70 @@ namespace Mobile_cooking
         {
             InitializeComponent();
         }
+
+        private void FirstButon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SecondButon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SaladButon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CakeButon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SouseButon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DesertButon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DrinkButon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FoundButon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ServiceButon_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void QuestionButon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuButon_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CloseButon_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ListBoxItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
