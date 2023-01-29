@@ -23,12 +23,14 @@
                     К У Л І Н А Р І Я
                 </Label>
                 <Button x:Name="ServiceButon" 
-                        Width="40"                        
+                    Width="40"
+                    ToolTip="Корисні поради"
                     Click="ServiceButon_Click">
                     *
                 </Button>
                 <Button x:Name="QuestionButon" Width="40"
-                    Click="QuestionButon_Click">
+                    Click="QuestionButon_Click"
+                    ToolTip="Інструкція по роботі із програмою">
                     ?
                 </Button>
                 <Button x:Name="MenuButon" Width="60"
@@ -41,7 +43,8 @@
                 </Button>
             </WrapPanel>
         </StackPanel>
-        <StackPanel Grid.Row="1">
+        <StackPanel Grid.Row="1"
+                    Opacity="1">
             <WrapPanel>
                 <Button x:Name="FirstButon" Width="80"
                     Click="FirstButon_Click">
@@ -86,48 +89,42 @@
             <WrapPanel>
                 <ListView 
                   ItemsSource="{Binding BindingGroupName}"
-                  Background="WhiteSmoke"
+                  Background="BlanchedAlmond"
                   HorizontalAlignment="Center"
-                  Height="450" 
-                  ScrollViewer.VerticalScrollBarVisibility="Auto"
-                  Width="300" >
-                    <ListView.View >
-                        <GridView>
-                            <GridViewColumn
-                                Header="Назва рецептів"
-                                DisplayMemberBinding="{Binding StringFormat}"/>
-
-                        </GridView>                        
-                    </ListView.View>
-                    <ListView.Resources>
+                  MouseDoubleClick="ListView_MouseDoubleClick"                  
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  Height="450"                  
+                  Width="162">
+                    <TextBlock x:Name="ListViewName"/>
+                    <!--<ListView.Resources>
                         <Style TargetType="{x:Type ListViewItem}">
-                            <EventSetter
+                            <EventSetter                            
                         Event="MouseDoubleClick"
                         Handler="ListView_MouseDoubleClick"/>
                         </Style>
-                    </ListView.Resources>
+                    </ListView.Resources>-->
                 </ListView>
                 <TabPanel>
                     <TextBlock x:Name="Description"
                            Background="BlanchedAlmond"
-                           FontSize ="10"                                         
+                           FontSize ="15"                                         
                            Height="250"
                            VerticalAlignment="Top"    
                            Width="580"/>
-                    <TextBlock x:Name="Ingredients"
+                    <TextBlock x:Name="Ingredients_text"
                            Background="BlanchedAlmond"
-                           FontSize ="10"
+                           FontSize ="15"
                            HorizontalAlignment="Left"
                            Height="205"
                            Width="322"/>
-                    <Image x:Name="Image"
+                    <Image x:Name="Image_pic"
                            Height="205" Width="230"                           
                            HorizontalAlignment="Left">
                         <Image.Resources 
                             x:Uid="C:\Users\PC\Desktop\Кулинарная книга\_image">
                         </Image.Resources>
                     </Image>
-                </TabPanel>
+                </TabPanel>                
             </WrapPanel>
         </StackPanel>
     </Grid>
